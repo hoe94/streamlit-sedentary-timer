@@ -1,8 +1,11 @@
 import streamlit as st
 import time
+import os
 import pygame
 #from playsound import playsound
 import threading
+
+os.environ['SDL_AUDIODRIVER'] = 'alsa' 
 
 pygame.mixer.init()
 alarm_sound = "assets/alarm.mp3"
