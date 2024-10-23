@@ -10,6 +10,7 @@ import subprocess
 
 if platform.system() == 'Linux':
     os.environ['SDL_AUDIODRIVER'] = 'alsa'  # Use 'alsa' for Linux
+    subprocess.run(["sudo", "apt-get", "update"], check=True)
     subprocess.run(["sudo", "apt-get", "install", "-y", "libasound2"], check=True)
 elif platform.system() == 'Windows':
     os.environ['SDL_AUDIODRIVER'] = 'directsound'  
